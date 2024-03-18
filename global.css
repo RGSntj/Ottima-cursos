@@ -21,9 +21,9 @@
 *::-webkit-scrollbar {
   width: 8px;
 }
-/* 
-section {
-  padding: 6% 10% !important;
+
+/* section {
+  max-width: 1440px !important;
 } */
 
 .separator {
@@ -31,3 +31,9 @@ section {
   margin-left: 5%;
   margin-right: 5%;
 }
+
+.logo {
+  color: #0e2733;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
