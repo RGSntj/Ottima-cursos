@@ -172,28 +172,25 @@ header nav ul a:hover {
 }
 
 .courses .container-cards {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 380px 380px 380px;
+  gap: 1.2rem 20px;
 }
 
 .courses .container-cards .card {
-  height: 500px;
-  box-shadow: 5px 5px 20px black;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  min-width: 380px;
+  min-height: 200px;
+  height: 100%;
+  background-color: #f5f8fe;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
 }
 
 .courses .container-cards .card img {
-  height: 500px;
-  /* border-radius: 3px; */
-  width: 350px;
-  transition: all 0.3s;
-  object-fit: cover;
+  transition: all 0.4s;
 }
 
 .courses .container-cards .card:hover img {
@@ -429,13 +426,29 @@ footer .container nav a.underline {
     text-align: center;
   }
 
-  .courses .container-cards {
-    display: grid;
-    place-items: center;
+  .courses {
+    padding: 5% 0;
+    text-align: center;
   }
 
-  .courses {
-    text-align: center;
+  .courses > h3 {
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .courses .container-cards {
+    display: flex;
+    overflow-y: auto;
+    padding: 0 4%;
+  }
+
+  .courses .container-cards .card {
+    display: flex;
+    align-items: center;
+  }
+
+  .courses .container-cards .card a {
+    width: 100%;
   }
 
   .card-container {
