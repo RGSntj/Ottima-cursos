@@ -21,26 +21,26 @@
       <nav>
         <a href="" class="logo">ot<span>TI</span>ma</a>
 
-        <ul>
+        <ul class="nav-bar">
           <li>
             <a href="#cursos">
               <i class="ph ph-bag" style="font-size: 20px"></i>
-              Juventudes e trabalho
+              Cursos
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#apoiadores">
               <i
                 class="ph ph-globe-hemisphere-west"
                 style="font-size: 20px"
               ></i>
-              Países
+              Apoiadores
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#depoimentos">
               <i class="ph ph-cell-signal-full" style="font-size: 20px"></i>
-              Analítico
+              Depoimentos
             </a>
           </li>
           <li>
@@ -76,7 +76,7 @@
         tecnologia!
       </p>
 
-      <a href="">Veja os planos</a>
+      <a href="#">Veja os planos</a>
 
       <div class="card-container widget">
         <div class="row">
@@ -156,7 +156,7 @@
 
       <div class="container-cards">
         <div class="card">
-          <img src="/dock.svg" alt="" width="35px" style="margin-bottom: 5px" />
+          <i class="bx bx-grid" style="font-size: 45px"></i>
           <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 15px">
             Designer de produto
           </h2>
@@ -182,12 +182,7 @@
           >
         </div>
         <div class="card">
-          <img
-            src="/desktop-mac.svg"
-            alt=""
-            width="35px"
-            style="margin-bottom: 5px"
-          />
+          <i class="bx bx-desktop" style="font-size: 45px"></i>
 
           <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 15px">
             Desenvolvedor Front-end
@@ -214,12 +209,7 @@
           >
         </div>
         <div class="card">
-          <img
-            src="/desktop-windows.svg"
-            alt=""
-            width="35px"
-            style="margin-bottom: 5px"
-          />
+          <i class="bx bx-desktop" style="font-size: 45px"></i>
           <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 15px">
             Desenvolvedor Back-end
           </h2>
@@ -245,12 +235,7 @@
           >
         </div>
         <div class="card">
-          <img
-            src="/thumb-up.svg"
-            alt=""
-            width="35px"
-            style="margin-bottom: 5px"
-          />
+          <i class="bx bx-like" style="font-size: 45px"></i>
           <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 15px">
             Marketing Digital
           </h2>
@@ -276,12 +261,7 @@
           >
         </div>
         <div class="card">
-          <img
-            src="/developer-mode.svg"
-            alt=""
-            width="35px"
-            style="margin-bottom: 5px"
-          />
+          <i class="bx bx-code"></i>
           <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 15px">
             Ciência de dados
           </h2>
@@ -307,12 +287,7 @@
           >
         </div>
         <div class="card">
-          <img
-            src="/insert-chat.svg"
-            alt=""
-            width="35px"
-            style="margin-bottom: 5px"
-          />
+          <i class="bx bx-objects-vertical-bottom" style="font-size: 45px"></i>
           <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 15px">
             Gestão de produtos
           </h2>
@@ -340,7 +315,7 @@
       </div>
     </section>
 
-    <section class="supporters animation">
+    <section class="supporters animation" id="apoiadores">
       <h3>Quem apoia nosso projeto</h3>
       <p>
         Nossa empresa conta com a confiança de diversas organizações. Confira
@@ -369,7 +344,7 @@
       </div>
     </section>
 
-    <section class="depositions animation">
+    <section class="depositions animation" id="depoimentos">
       <h3>
         <strong>Depoimentos dos</strong>
         nossos alunos
@@ -469,9 +444,20 @@
 
     <script>
       const menu = document.querySelector(".menu");
+      const navBar = document.querySelector(".nav-bar");
+      const count = document.querySelector("#count");
+      const linksNavBar = document.querySelectorAll(".nav-bar a");
+
+      linksNavBar.forEach((element) => {
+        element.addEventListener("click", () => {
+          menu.classList.remove("ativo");
+          navBar.classList.remove("ativo");
+        });
+      });
 
       menu.addEventListener("click", () => {
         menu.classList.toggle("ativo");
+        navBar.classList.toggle("ativo");
       });
 
       ScrollReveal().reveal(".animation", {

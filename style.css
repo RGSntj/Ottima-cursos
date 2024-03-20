@@ -189,64 +189,13 @@ header nav ul a:hover {
   margin-top: 30px;
 }
 
-.courses .container-cards .card img {
+.courses .container-cards .card i {
   transition: all 0.4s;
+  font-size: 30px !important;
 }
 
-.courses .container-cards .card:hover img {
-  transform: scale(1.1) rotate(-3deg);
-}
-
-.badge {
-  position: absolute;
-  padding: 5px 20px;
-  top: 20px;
-  right: 20px;
-  color: white;
-  font-size: 13px;
-  border-radius: 30px;
-  background-color: rgba(0, 255, 0, 0.2);
-}
-
-.courses .container-cards .card .info {
-  height: 70px;
-  width: 350px;
-  padding: 10px;
-  position: absolute;
-  bottom: 0;
-  z-index: 999;
-  background-color: rgba(27, 27, 27, 0.5);
-  color: white;
-  transition: all 0.3s ease;
-  overflow-y: scroll;
-  text-align: center;
-}
-
-.courses .container-cards .card .info::-webkit-scrollbar-thumb {
-  /* background-color: transparent; */
-  display: none;
-}
-
-/* .courses .container-cards .card:hover {
-  transform: translateY(-10px);
-} */
-
-.courses .container-cards .card .info p {
-  opacity: 0;
-  font: 300 14px Poppins;
-  margin-top: 10px;
-  line-height: 25px;
-  /* max-width: 200px; */
-}
-
-.courses .container-cards .card:hover .info {
-  height: 220px;
-  /* bottom: 240px; */
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.courses .container-cards .card:hover .info p {
-  opacity: 1;
+.courses .container-cards .card:hover i {
+  transform: rotate(3deg);
 }
 
 .supporters {
@@ -534,9 +483,34 @@ footer .container nav a.underline {
     display: block;
   }
 
-  header nav ul {
-    display: none;
+  header nav .nav-bar {
+    position: fixed;
+    right: -100%;
+    top: 70px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: start;
+    /* align-items: center; */
+    background: #f6f6f6;
+    gap: 20px !important;
+    transition: all 0.3s;
+    /* margin-top: 30px; */
+    z-index: 9999;
   }
+
+  header nav .nav-bar.ativo {
+    right: 0;
+  }
+
+  header nav .nav-bar li a {
+    font-size: 24px;
+    /* border: 1px solid #cecece; */
+  }
+
+  /* header nav ul {
+    display: none;
+  } */
 
   header nav a:first-child {
     font-size: 1.8rem;
