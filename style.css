@@ -1,9 +1,16 @@
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 header nav {
   display: flex;
   justify-content: space-around;
   text-align: center;
   align-items: center;
-  padding: 30px 60px;
+  padding: 15px 60px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 header nav .logo {
@@ -67,6 +74,7 @@ header nav ul a:hover {
   /* padding: 50px 150px; */
   padding: 5% 10%;
   max-width: 1440px;
+  margin: 0 auto;
   /* background-color: #cecece; */
   /* border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px; */
@@ -250,6 +258,34 @@ header nav ul a:hover {
   color: #808080;
 }
 
+.mission {
+  background-color: #00796b1a;
+  padding: 70px 0;
+  /* max-width: 70rem; */
+}
+
+.mission .container-card {
+  display: flex;
+  margin: 70px auto;
+  max-width: 70rem;
+  align-items: center;
+  gap: 30px;
+}
+
+.mission .container-card .card {
+  display: flex;
+  gap: 20px;
+  /* max-width: 35%; */
+}
+
+.mission .container-card .card img {
+  object-fit: contain;
+}
+
+.mission .container-card .card .cta {
+  width: 80%;
+}
+
 .depositions {
   padding: 6% 10%;
   display: flex;
@@ -362,6 +398,32 @@ footer .container nav a.underline {
   width: fit-content;
 }
 
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  font-size: 1.8rem;
+  color: #ffffff;
+  background-color: #0e2733;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: none;
+  transition: all 0.3s;
+}
+
+/* @media screen and (max-width: 1250px) {
+  .courses .container-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+} */
+
 @media (max-width: 785px) {
   .apresentation {
     display: flex;
@@ -394,6 +456,14 @@ footer .container nav a.underline {
   .courses .container-cards .card {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    /* min-height: 250px; */
+    /* max-height: 300px; */
+    height: auto;
+  }
+
+  .courses .container-cards .card p {
+    text-align: start;
   }
 
   .courses .container-cards .card a {
@@ -442,6 +512,14 @@ footer .container nav a.underline {
     font-size: 16px;
   }
 
+  .mission {
+    padding: 30px 8%;
+  }
+
+  .mission .container-card {
+    flex-direction: column;
+  }
+
   .depositions {
     flex-direction: column;
   }
@@ -468,16 +546,6 @@ footer .container nav a.underline {
   footer .container .nav-container {
     flex-direction: column;
   }
-
-  /* header {
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.9);
-    z-index: 9999;
-    margin-bottom: 50px;
-  } */
 
   header nav .menu {
     display: block;
